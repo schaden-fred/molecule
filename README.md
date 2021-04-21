@@ -3,15 +3,12 @@ Self-contained development and testing environment for Ansible roles and playboo
 
 ## Setup
 Edit each Vagrantfile, and find the section marked "Create local clone of Ansible repo"
-Edit the path(s) to your Ansible repo(s) here.  This will cause them to be cloned to the development machine.
+Edit the path(s) to your Ansible repo(s) here.  They will be cloned to the development machine when you run Vagrant.
 
 ## Running the VM
-You must have VirtualBox and Vagrant installed.
+You must have VirtualBox and Vagrant installed.  Change to the vm/centos7  or cd vm/centos8 directory, depending on if you want a Centos7 or Centos8 development box.
 
-```sh
-cd vm
 vagrant up
-```
 
 ## Connecting to the VM
 
