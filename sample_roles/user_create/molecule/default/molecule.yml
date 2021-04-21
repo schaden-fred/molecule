@@ -1,0 +1,22 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: centos7
+    image: centos:7
+  - name: centos6
+    image: centos:6
+  - name: ununtu
+    image: ubuntu:latest
+provisioner:
+  name: ansible
+verifier:
+  name: testinfra
+lint: |
+  set -e
+  yamllint .
+  flake8
+# Disabling ansible-lint until I can resolve the python2.7 issue.  I need to get it to use python3.
+#  ansible-lint

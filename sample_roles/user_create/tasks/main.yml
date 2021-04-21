@@ -1,0 +1,13 @@
+---
+# tasks file for create_user
+- name: Create example group
+  group:
+    name: ljenkins
+    state: present
+
+- name: Create example user with no password
+  user:
+    name: ljenkins
+    comment: Leroy Jenkins
+    group: ljenkins
+    home: /home/ljenkins

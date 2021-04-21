@@ -1,0 +1,18 @@
+---
+# tasks file for create_file
+- name: Create a directory if it does not exist
+  file:
+    path: /tmp/Ansible
+    state: directory
+    mode: '0755'
+
+- name: Check if file exists.
+  stat: path=/tmp/Ansible/AnsibleWasHere.txt
+  register: p
+
+- name: Create file if it does not exist.
+  file:
+    path: /tmp/Ansible/AnsibleWasHere.txt
+    state: touch
+    mode: u=rw,g=rw,o=rw
+  when: not p.stat.exists
