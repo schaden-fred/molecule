@@ -1,5 +1,6 @@
 # molecule
 Self-contained development and testing environment for Ansible roles and playbooks.  Creates a Centos 7 VM in Vagrant/VirtualBox.  Installs Docker and Molecule.  Pulls down your Ansible repo.  Includes example role(s) and test(s).
+NOTE: This code has not been maintained since 2021, and will need to be updated in order to function with the current versions of Vagrant/Docker/Molecule
 
 ## Setup
 Edit each Vagrantfile, and find the section marked "Create local clone of Ansible repo"
